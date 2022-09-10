@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%; /* 10px = 1rem */
+}
+
+:root {
+  --orange: hsla(25, 97%, 53%, 0.75);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --medium-grey-tranparent: hsla(216, 12%, 54%, 0.15);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+  --tr-fast: ease-in 0.06s;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: "Overpass", sans-serif;
+  background-color: var(--very-dark-blue);
+}
+
+main {
+  max-width: 41.4rem;
+  background-color: var(--dark-blue);
+  padding: clamp(2rem, 2rem + 5vh, 4.6rem) 2.5rem;
+  border-radius: clamp(1.5rem, 0.5rem + 3vw, 3rem);
+  position: relative;
+}
+
+.circle {
+  height: clamp(4rem, 1rem + 6vw, 4.8rem);
+  width: clamp(4rem, 1rem + 6vw, 4.8rem);
+  background-color: var(--medium-grey-tranparent);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(1.3rem, 0.1rem + 2.5vw, 1.6rem);
+  color: var(--light-grey);
+}
+
+.circle img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--orange);
+}
+
+h1 {
+  font-size: clamp(2.3rem, 0.5rem + 3.5vw, 2.7rem);
+  font-weight: 600;
+  color: var(--white);
+  margin: clamp(1.8rem, 1.5rem + 5vh, 3rem) 0 clamp(1.2rem, 1rem + 5vh, 1rem);
+}
+
+p {
+  font-size: clamp(1.35rem, 0.2rem + 2vw, 1.5rem);
+  line-height: clamp(2.3rem, 0.5rem + 3vh, 2.5rem);
+  color: var(--light-grey);
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 0 2.5rem;
+}
+
+li.circle {
+  padding-top: 0.4rem;
+}
+
+li.circle:hover {
+  cursor: pointer;
+  background-color: var(--light-grey);
+  color: var(--white);
+  transition: var(--tr-fast);
+}
+
+.active {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+button {
+  width: 100%;
+  height: 4.5rem;
+  border: none;
+  border-radius: 2.25rem;
+  padding-top: 0.04rem;
+  background-color: var(--orange);
+  font-family: inherit;
+  font-size: clamp(1.3rem, 0.1rem + 2vw, 1.5rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--white);
+  letter-spacing: 0.2rem;
+  transition: var(--tr-fast);
+}
+
+button:hover,
+button:focus {
+  cursor: pointer;
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+button:active {
+  transform: scale(97%);
+}
+
+/* appreciate.html */
+.centralized-main {
+  text-align: center;
+}
+
+.img-tks {
+  width: clamp(14.5rem, 2rem + 20vw, 16.3rem);
+  height: auto;
+}
+
+.circle.rated {
+  height: 3.1rem;
+  width: fit-content;
+  border-radius: 1.75rem;
+  padding: 0.4rem 1.3rem 0;
+  font-size: 1.5rem;
+  color: var(--orange);
+  margin: clamp(1.8rem, 1rem + 5vh, 3rem) auto clamp(2.5rem, 1rem + 5vh, 3.5rem);
+}
+
+@media screen and (min-width: 375px) {
+  main {
+    margin: 0 2.75rem;
+  }
+}
